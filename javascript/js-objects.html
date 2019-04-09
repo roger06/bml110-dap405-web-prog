@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>JS Objects</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        body {
+            padding-top: 5rem;
+        }
+
+        .starter-template {
+            padding: 3rem 1.5rem;
+
+        }
+    </style>
+    <script>
+
+//    declare object
+     var Myobject  = new Object();  // note capital M (as it's an object)
+
+//        set up properties (variables)
+
+        Myobject.firstName = 'Roger';
+        Myobject.lastName = 'Holden';
+
+
+        Myobject.myMethod = function() {
+//             return 'Dave';
+//              do something or return something
+           // alert('here');
+
+        }
+
+        Myobject.myMethod();
+         console.log(Myobject);
+    </script>
+</head>
+
+
+<body>
+ <script>
+
+
+    </script>
+
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <h1>Start JS</h1>
+            <p class="lead">So let's take a look at...</p>
+
+        <h3>JS Objects...</h3>
+
+           <pre>
+                var Myobject  = new Object();
+                Myobject.firstName = 'Roger';
+
+                or...
+
+                var Myobject = {
+
+                    firstName = 'Roger';
+                    lasstName = 'Holden';
+                }
+
+
+                Dot notation and brackets notation for same thing
+                Myobject.firstName;
+                Myobject["firstName"]   (gives more flexibity)
+           </pre>
+
+            <h2>The browser is an object</h2>
+           <p>Browser Object Model - 'BOM'... we can interact with this with JS as we can any other object.</p>
+
+            <p>'window' is the top level object in the 'BOM'.</p>
+
+            <p>'document' contains the current HTML doc in the browser. This has its own object model the 'DOM' Document Object Model</p>
+
+            <pre>
+
+            To test - using console.
+                window.document.myForm.yourname.value;
+            </pre>
+
+            <!--        Example-->
+
+            <script>
+//            drill down to one of the form fields.
+
+
+            console.log(window.innerWidth);
+            </script>
+
+        </div>
+
+    </main>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

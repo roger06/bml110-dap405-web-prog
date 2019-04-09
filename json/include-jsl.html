@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+        <title>JS / JSON</title>
+       <style>
+
+           .code{
+
+               font-family: monospace;
+
+           }
+
+           code {
+
+               font-weight: bold;
+               background-color: #ccc;
+               font-size: 1.1rem;
+               padding: 0.7rem;
+           }
+
+           .console {
+
+
+
+           }
+        </style>
+        <script src="skidata.js">
+//       this imports a JS object
+
+        </script>
+         <script src="skidata.json">
+//       this imports a JS object
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <script>
+//         console.log(skidata);
+
+      console.log('ski data.js = ' +typeof skidata);
+
+        </script>
+     <pre class="code">
+    The line...
+
+    <code>&lt;script src="skidata.js"&gt;&lt;/script&gt;</code>
+
+    Imports an external JavaScript (JS) file.
+    In this case it's an object - similar to, but NOT actually JSON
+
+    To check this in your code
+    <code>console.log(skidata)</code> will show you the data
+
+
+    <code>console.log(typeof skidata)</code> will tell you (in this case) the variable is an object.
+
+     </pre>
+
+     <h2>Import JSON</h2>
+
+        <pre class="code">
+    This gives an error as it's trying to import a JS object...
+
+    <code>&lt;script src="skidata.json"&gt;&lt;/script&gt;</code>
+
+
+
+     </pre>
+
+
+    </body>
+</html>

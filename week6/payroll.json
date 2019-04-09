@@ -1,0 +1,24 @@
+{
+    "employees" : [
+  {
+    "id":"0",
+    "firstname":"Roger",
+    "lastname":"Holden",
+    "grade":"7",
+    "jobtitle":"Senior Lecturer in Software Development",
+    "nationalinsurance":"NS1234567",
+    "department":"",
+    "reports":[ "Bob Davis", "Dave Bobby", "Jan January" ],
+    "linemanager":"",
+    "salary":"500000",
+    "currency":"GBP",
+    "phohe":"01243 812222",
+    "email":"r.holden@chi.ac.uk",
+    "homeemail":"r.holden@email.com",
+    "nextofkin":"",
+    "employmentstart":"1/1/200",
+    "previousroles":[ "IT Manager", "Web Developer", "Coffee Maker" ],
+    "otherroles":[ "First Aider", "AED Trained", "Fire Marshall" ]
+  }
+
+]}
