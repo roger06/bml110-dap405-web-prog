@@ -1,5 +1,0 @@
-<?php
-
-//integers
-
-?>
