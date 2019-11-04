@@ -19,6 +19,9 @@ session_start();
 
     echo 'name = ' .$_SESSION['name'] ;
     echo '<p>age = ' . $_SESSION['age']  ;
+?>
+<h2>Cookie?</h2>
+<?php    print_r($_COOKIE);
 
 ?>
         </body>

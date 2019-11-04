@@ -1,10 +1,16 @@
 <?php
 
- 
-// Date and times
-//  
+ class Employee {
+
+    var $name = 'Barry';
+
+    function getName () {
+
+        return $this->name;
 
 
+    }
+ } // end class Employee
 
     
 ?>
@@ -13,7 +19,7 @@
 <head>
      
     
-    <title>Date and times</title>
+    <title>PHP OOP - Object Oriented Programming</title>
 
    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,7 +32,7 @@
 
         .starter-template {
             padding: 3rem 1.5rem;
-            text-align: center;
+            
         }
     </style>
 </head>
@@ -39,8 +45,26 @@
     <main role="main" class="container">
 
         <div class="starter-template">
-            <h1>starter template</h1>
-            
+            <h1>PHP OOP - Object Oriented Programming</h1>
+
+        <?php 
+
+            $classes = get_declared_classes();
+            echo '<pre>';
+                // print_r($classes);
+            echo '</pre>';
+
+
+            if (class_exists('Employee')){
+
+                echo 'emp class exists  - yay hey!';
+            }
+            else echo 'no such class found';
+           $emp = new Employee; 
+           echo '<p>Name = ' . $emp->getName() ;
+        ?>
+
+
         </div>
 
     </main>
