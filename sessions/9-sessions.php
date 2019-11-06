@@ -17,12 +17,31 @@ session_start();
     $_SESSION['age'] = 21;
 //sessions
 
-    echo 'name = ' .$_SESSION['name'] ;
-    echo '<p>age = ' . $_SESSION['age']  ;
+    echo 'Session name = ' .$_SESSION['name'] ;
+    echo '<p>Session  age = ' . $_SESSION['age']  ;
 ?>
-<h2>Cookie?</h2>
+<h2>Iterate through $_SESSION</h2>
+    
+ <pre>
+<?php    print_r($_SESSION);
+
+?>
+</pre>      
+        
+        
+<h2>Cookie</h2>
+<pre>
 <?php    print_r($_COOKIE);
 
 ?>
-        </body>
+</pre>
+<h2>Navigate to a second file</h2>   
+
+<p><a href="sessions2.php">Another file.</a></p>    
+        
+        
+        
+        
+    
+    </body>
 </html>
