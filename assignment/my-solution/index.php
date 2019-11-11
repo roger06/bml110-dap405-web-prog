@@ -3,13 +3,14 @@
 require('inc/fns-inc.php');
 require_once('inc/header-inc.php');
 
-$jsonfile = 'employees-final.json';
+$jsonfile = 'data/employees-final.json';
+$taxfile   = 'data/tax-tables.json';
 
 try {
     
     // $json = @file_get_contents($jsonfile) or die("cannot open file - $jsonfile");
     $json = @file_get_contents($jsonfile);
-
+    $taxjson = @file_get_contents($taxfile); 
 } catch (Exception $e) {
 
    // echo 'Caught exception: ',  $e->getMessage(), "\n";
@@ -23,9 +24,11 @@ restore_error_handler();
 // https://www.php.net/manual/en/function.restore-error-handler.php
 
 
-$emp_json_data = json_decode($json);  // 2nd param true returns array, false returns .
+$emp_json_data = json_decode($json);  // 2nd param true returns array, false returns object.
+$tax_rates_array = json_decode($taxjson,true); 
 
-$header_array = array("id"=>"ID", "firstname"=>"First Name", "lastname"=>"Last Name", "jobtitle"=>"Position","salary"=>"Salary" );
+
+$header_array = array("id"=>"ID", "firstname"=>"First Name", "lastname"=>"Last Name", "jobtitle"=>"Position","salary"=>"Salary", "band"=>"Tax Band" ,"netsalary"=>"Net Salary" );
 // var_dump( json_decode($json, false));
 
 ?>
@@ -49,14 +52,20 @@ foreach($emp_json_data as $data){
     // var_dump( $data);
 $link ="payslip.php?id=";
 
-   
+$band = getBand($data->salary);   
+
     echo "<tr>";
         echo write_cell($data->id, "" , $link);
         echo write_cell($data->firstname);
         echo write_cell($data->lastname);
         echo write_cell($data->jobtitle);
-
         echo write_cell($data->salary, "GBP");
+
+        echo write_cell($band);
+        
+        
+        echo write_cell( calcTax($data->salary, $band));
+
 
     
     echo "</tr>";

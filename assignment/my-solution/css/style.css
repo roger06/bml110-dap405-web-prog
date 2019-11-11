@@ -22,3 +22,6 @@ main {
 a {
     display: block;
 }
+
+/* nav */
+.label,.glyphicon { margin-right:5px; }

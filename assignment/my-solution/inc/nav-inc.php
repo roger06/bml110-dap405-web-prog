@@ -1,4 +1,4 @@
-
+ 
     <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -6,25 +6,14 @@
                 <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
                     class="icon-bar"></span><span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://www.jquery2dotnet.com">Brand</a>
+            <a class="navbar-brand" href="index.php">Home</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Dashboard</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>Calendar</a></li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
-                    class="glyphicon glyphicon-list-alt"></span>Widgets <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="http://www.jquery2dotnet.com">Action</a></li>
-                        <li><a href="http://www.jquery2dotnet.com">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>About</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>Payroll Dates</a></li>
+                
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
                     class="glyphicon glyphicon-search"></span>Search <b class="caret"></b></a>
                     <ul class="dropdown-menu" style="min-width: 300px;">
