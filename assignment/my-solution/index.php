@@ -29,11 +29,12 @@ $header_array = array("id"=>"ID", "firstname"=>"First Name", "lastname"=>"Last N
 // var_dump( json_decode($json, false));
 
 ?>
-<h1>Payroll</h1>
+
 <main class="container">
+<h1>Payroll</h1>
 <div class="card">
     <div class="table-responsive">
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered table-hover">
         <tr>
 <?php
 
@@ -46,15 +47,16 @@ foreach ($header_array as $header){
 <?php
 foreach($emp_json_data as $data){
     // var_dump( $data);
+$link ="payslip.php?id=";
 
    
     echo "<tr>";
-    echo write_cell($data->id);
-    echo write_cell($data->firstname);
-    echo write_cell($data->lastname);
-    echo write_cell($data->jobtitle);
+        echo write_cell($data->id, "" , $link);
+        echo write_cell($data->firstname);
+        echo write_cell($data->lastname);
+        echo write_cell($data->jobtitle);
 
-    echo write_cell($data->salary, "GBP");
+        echo write_cell($data->salary, "GBP");
 
     
     echo "</tr>";
