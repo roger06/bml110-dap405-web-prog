@@ -8,13 +8,16 @@
 
 
 <?php
+        
+session_start();
  echo ('h1 <p>');
 
 $name = 'bill';
 
-session_start();
+
     $_SESSION['name'] = 'roger';
     $_SESSION['age'] = 21;
+    $_SESSION['mail'] = 'asd@com';
 //sessions
 
     echo 'Session name = ' .$_SESSION['name'] ;

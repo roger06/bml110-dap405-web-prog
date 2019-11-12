@@ -1,6 +1,6 @@
 <?php
  
-include('incfile-inc.php');
+require('incsfile-inc.php');
 
 
 ?>
