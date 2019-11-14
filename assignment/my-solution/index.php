@@ -52,9 +52,9 @@ foreach($emp_json_data as $data){
     // var_dump( $data);
 $link ="payslip.php?id=";
 
-$band = getBand($data->salary);   
+$band = getBand($data->salary); 
+         
 
-    echo "<tr>";
         echo write_cell($data->id, "" , $link);
         echo write_cell($data->firstname);
         echo write_cell($data->lastname);

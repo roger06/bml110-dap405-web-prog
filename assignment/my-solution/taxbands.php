@@ -24,6 +24,8 @@ restore_error_handler();
 
 $tax_rates_array = json_decode($taxjson, true); 
 
+// var_dump($tax_rates_array);
+// exit;
 
 $header_array = array("name"=>"Name", "description"=>"Description", "minsalary"=>"Min Salary", "maxsalary"=>"Max Salary","rate"=>"Rate", "exceptions"=>"Exceptions");
 // var_dump( json_decode($json, false));
@@ -56,28 +58,41 @@ foreach ($header_array as $header => $label){
         
 
         // handle the exceptions field - this is probably much easier as an array than object!
+        
+
+        echo "<td>";
+
         if (is_array($data[$header])) {
-            echo "data=>$header is an array!!!";
-            // $arr = $data->$header;
-            // // $data->$header = implode( ",", $arr);
-            // $implode = implode( ",", $data[$header]);
+          
             $implode = '';
 
             foreach ($data[$header] as $key => $value) {
 
                 foreach ($value as $key => $data)
-                $implode .= $key . " " .$data;
+                $implode .= $key . ": " .$data;
                 $implode .= ", ";
 
             }
-
-            echo "Implode = " .$implode;
-            $header = $implode;
+            echo substr($implode, 0, -2);
+            // $header = $implode;
             // echo "<pre>"; print_r($data[$header]); echo "</pre>";
 
         }
 
-        echo "<td>" . $data[$header] . "</td>";
+        else {
+            if ($header == 'minsalary' OR $header == 'maxsalary'){
+               echo "&pound;"; 
+               $data[$header] = number_format($data[$header],2);
+            } 
+
+            
+            echo $data[$header];
+        
+        }
+            if ($header == 'rate') echo '%';
+
+
+        echo "</td>";
         }
     
    
