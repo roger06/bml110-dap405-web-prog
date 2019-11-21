@@ -48,7 +48,11 @@ $uploads ='uploads/';
             echo '<p>We could, therefore, reject it at this stage if it is too big or the wrong type.</p>';
 
 
-
+            echo '<pre>';    
+            print_r($_FILES);
+            echo '</pre>';   
+            
+            exit;
             echo '<h4>File type</h4>';
             echo $_FILES['myfile']['type'];
 

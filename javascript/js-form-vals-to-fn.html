@@ -51,21 +51,12 @@
         }
 
 
-     function checkme (type) {
+     function checkme(type) {
 
          var email = document.myForm.email.value;
 
          var email2 = document.getElementById('email').value; // there must be an id in the html
-         /*
-
-         or document.querySelectorAll ?
-         or is that just for tags, classes and IDs.
-
-         document.getElementById("");   ??????
-
-
-         */
-
+        
          if (email == '') return false;
 
 
@@ -73,11 +64,6 @@
          console.log('email is ' + email);
          console.log('email2 is ' + email2);
 
-//         do some basic error checking.
-
-//         check there are no spaces.
-
-//         check there's an
 
 
       }
@@ -126,25 +112,11 @@
 
     <div id="namediv">Here is some text</div>
     <br>
-    <hr style="margin-bottom: 100px;">
-
-
-    <label for="pounds">Value </label>
-    <input type="text" name="pounds" value="1000" required class=""><br>
-
-    <label for="email">Email </label>
-    <input type="text" name="email" value="" required class="" id="email">  <a class="btn btn-primary" href="#" role="button" onclick="checkme()">Check format</a> <br>
-
-
-
-
-
 
 
 </form>
 
-            <a class="btn btn-primary" href="#" role="button" onclick="changeme()">Get Euros</a>
-           <h2>Target an element in the DOM to do something with it is a key part of JS.</h2>
+
 <pre>
 
  Use document.querySelectorAll() and document.querySelector() in console e.g. document.querySelectorAll('a') returns all a tags in DOM
