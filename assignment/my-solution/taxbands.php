@@ -11,7 +11,7 @@ try {
     $taxjson = @file_get_contents($taxfile); 
 } catch (Exception $e) {
 
-   // echo 'Caught exception: ',  $e->getMessage(), "\n";
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
 
     include('inc/error-inc.php');
     include('inc/footer-inc.php');
@@ -101,60 +101,58 @@ echo "</tr>";
 } // end outer foreach
 
 
-exit;
+// exit;
 
 
 
-foreach($tax_rates_array as $data){
-    // var_dump( $data);
+// foreach($tax_rates_array as $data){
+//     // var_dump( $data);
 
 
-    echo "<tr>";
+//     echo "<tr>";
 
 
-        echo write_cell($data->name);
-        // echo write_cell($data->firstname);
-        // echo write_cell($data->lastname);
-        // echo write_cell($data->jobtitle);
-        // echo write_cell($data->salary, "GBP");
+//         echo write_cell($data->name);
+//         // echo write_cell($data->firstname);
+//         // echo write_cell($data->lastname);
+//         // echo write_cell($data->jobtitle);
+//         // echo write_cell($data->salary, "GBP");
 
-        // echo write_cell($band);
+//         // echo write_cell($band);
         
         
-        // echo write_cell( calcTax($data->salary, $band));
+//         // echo write_cell( calcTax($data->salary, $band));
 
 
     
-    echo "</tr>";
+//     echo "</tr>";
 
-}
+// }
 ?>
         </table>
     </div>
 </div>
 
 <?php
-exit;
+// exit;
 
-if  ( is_object($emp_json_data)    ) echo 'json_data is object<br>';
-else echo 'json_data is not object<br>';
+// if  ( is_object($emp_json_data)    ) echo 'json_data is object<br>';
+// else echo 'json_data is not object<br>';
 
 
-if  ( is_array($emp_json_data)    ) echo 'json_data is array<br>';
-else echo 'json_data is not array<br>';
+// if  ( is_array($emp_json_data)    ) echo 'json_data is array<br>';
+// else echo 'json_data is not array<br>';
 
-exit;
-echo "<pre>";
+// exit;
+// echo "<pre>";
 
-    print_r($emp_json_data);
-echo "</pre>";
+//     print_r($emp_json_data);
+// echo "</pre>";
 
 ?>
 
+
 </main>
-
-
- 
 
 
 

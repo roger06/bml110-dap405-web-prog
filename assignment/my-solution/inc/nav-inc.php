@@ -12,10 +12,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>About</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>Payroll Dates</a></li>
+                <li><a href="pay-dates.php"><span class="glyphicon glyphicon-calendar"></span>Payroll Dates</a></li>
                 <li><a href="taxbands.php"><span class="glyphicon glyphicon-list-alt"></span>Tax Bands</a></li>
 
                
+
+<!-- right hand nav -->
+
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
