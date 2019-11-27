@@ -14,6 +14,7 @@
                 <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>About</a></li>
                 <li><a href="pay-dates.php"><span class="glyphicon glyphicon-calendar"></span>Payroll Dates</a></li>
                 <li><a href="taxbands.php"><span class="glyphicon glyphicon-list-alt"></span>Tax Bands</a></li>
+                <li><a href="index-oop.php"><span class="glyphicon glyphicon-list-alt"></span>OOP Version</a></li>
 
                
 

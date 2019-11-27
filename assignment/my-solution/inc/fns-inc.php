@@ -111,10 +111,10 @@ function calcTax($salary, $band){
             $tax = $firsttaxable * ($tax_rates_array[1]["rate"] /100 );
             $tax += $secondtaxable   * ($tax_rates_array[2]["rate"] /100); 
             $tax += ($thirdtaxable   * ($tax_rates_array[3]["rate"] /100)); 
-            echo "<br>firsttaxtable  = ".$firsttaxable;
-            echo "<br>secondtaxable  = ".$secondtaxable;
-            echo "<br>thirdtaxable  = ".$thirdtaxable;
-            echo "<br>total tax  = ".$tax ." due...<br>";
+//            echo "<br>firsttaxtable  = ".$firsttaxable;
+//            echo "<br>secondtaxable  = ".$secondtaxable;
+//            echo "<br>thirdtaxable  = ".$thirdtaxable;
+//            echo "<br>total tax  = ".$tax ." due...<br>";
 
             $netsalary = $salary - $tax; // temp for testing
         break;
@@ -139,7 +139,7 @@ function getBand($salary){
 
         if ( $salary <=  $data["maxsalary"] ) {
     
-            echo "Salary (&pound;".$salary.") is in band " . $count;
+//            echo "Salary (&pound;".$salary.") is in band " . $count;
             return $count; // band (1 - 4)
         }
     

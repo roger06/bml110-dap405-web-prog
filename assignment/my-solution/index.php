@@ -86,11 +86,11 @@ else echo 'json_data is not object<br>';
 if  ( is_array($emp_json_data)    ) echo 'json_data is array<br>';
 else echo 'json_data is not array<br>';
 
-exit;
-echo "<pre>";
-
-    print_r($emp_json_data);
-echo "</pre>";
+//exit;
+//echo "<pre>";
+//
+//    print_r($emp_json_data);
+//echo "</pre>";
 
 ?>
 
