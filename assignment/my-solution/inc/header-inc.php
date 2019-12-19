@@ -30,6 +30,8 @@
     padding: 15px 0;
 }
     
+    </style>
+    
     <title>Payroll</title>
   </head>
   <body>

@@ -25,7 +25,7 @@ function write_cell($data, $format='', $link=''){
  
     if (is_numeric($data) AND $format == "GBP" ) {
         $data = number_format($data, 2);
-        $row .= "&pound";
+        $row .= "&pound;";
     }
 
     if ($link) {

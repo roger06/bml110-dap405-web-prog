@@ -27,6 +27,11 @@ restore_error_handler();
 $emp_json_data = json_decode($json);  // 2nd param true returns array, false returns object.
 $tax_rates_array = json_decode($taxjson,true); 
 
+// if ($emp_json_data) echo 'json valid';
+// else echo 'invalid !!!';
+// exit;
+
+
 
 $header_array = array("id"=>"ID", "firstname"=>"First Name", "lastname"=>"Last Name", "jobtitle"=>"Position","salary"=>"Salary", "band"=>"Tax Band" ,"netsalary"=>"Net Salary" );
 // var_dump( json_decode($json, false));
@@ -50,6 +55,8 @@ foreach ($header_array as $header){
 <?php
 foreach($emp_json_data as $data){
     // var_dump( $data);
+
+    echo '<tr>';
 $link ="payslip.php?id=";
 
 $band = getBand($data->salary); 
@@ -77,14 +84,14 @@ $band = getBand($data->salary);
 </div>
 
 <?php
-exit;
+// exit;
 
-if  ( is_object($emp_json_data)    ) echo 'json_data is object<br>';
-else echo 'json_data is not object<br>';
+// if  ( is_object($emp_json_data)    ) echo 'json_data is object<br>';
+// else echo 'json_data is not object<br>';
 
 
-if  ( is_array($emp_json_data)    ) echo 'json_data is array<br>';
-else echo 'json_data is not array<br>';
+// if  ( is_array($emp_json_data)    ) echo 'json_data is array<br>';
+// else echo 'json_data is not array<br>';
 
 //exit;
 //echo "<pre>";
