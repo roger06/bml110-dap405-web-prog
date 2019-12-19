@@ -1,4 +1,8 @@
+
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 require('inc/fns-inc.php');
 require_once('inc/header-inc.php');
@@ -15,8 +19,8 @@ try {
 
    // echo 'Caught exception: ',  $e->getMessage(), "\n";
 
-    include('inc/error-inc.php');
-    include('inc/footer-inc.php');
+    require('inc/error-inc.php');
+    require('inc/footer-inc.php');
     exit;
 }
 
