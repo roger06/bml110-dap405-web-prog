@@ -1,8 +1,6 @@
 <?php 
 
  /*include class*/
-
-
 require_once('inc/employee.class.php');
 
 
@@ -61,20 +59,22 @@ foreach ($header_array as $header){
 foreach($emp_json_data as $data){
     // var_dump( $data);
     
-    
-    $empObj = new Employee;
-    
-    
-$link ="payslip.php?id=";
+         /*   OO code   */ 
+         $empObj = new Employee;
 
-$band = getBand($data->salary); 
-         
+
+         $link ="payslip.php?id=";
+
+         $band = getBand($data->salary); 
+    
+         /*   OO code   */      
          $empObj->firstname = $data->firstname;
          $empObj->lastname = $data->lastname;
     
     
         echo write_cell($data->id, "" , $link);
-    
+        
+        /*   OO code   */ 
         /* using Employee object */    
         echo write_cell($empObj->getFullName());
     

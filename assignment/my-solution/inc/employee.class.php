@@ -4,7 +4,7 @@
     class Employee {
 
     var $firstname;
-    var $laststname;
+    var $lastname;
     var $salary;
         
 
