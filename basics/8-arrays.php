@@ -1,13 +1,35 @@
 <?php
 
 //arrays
-$myarray = array(1,4,6,77,88, 888888);
+ 
 
-//or shorthand $array = [1,4,6,77,88];
+$cars = array("ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo","ford", "GM", "Volvo");
+
+
+        foreach($cars as $thecar){
+            
+            echo $thecar . "<br>";
+        }
+exit;
+
+
+
+echo $cars[0];
+echo "<br>";
+echo $cars[1];
+echo "<br>";
+echo $cars[2];
+
+
+
+
+
+
+
+
 
 $array = [1,4,6,77,88];
 
-echo $myarray[0];
 
 $quickarray = [     "foo" => "bar",     "bar" => "foo",];
 

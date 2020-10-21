@@ -1,18 +1,21 @@
 
 <?php
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+include('fns.php');
+include('header.php');
 
-#require ('inc/connection-inc.php') or die("can't find include");
-
-if (!include('incfile-inc .php')) {
+if (!require('incfile-inc.php')) {
     
     echo "can't find include file - script halting";
-    exit();
+    // exit();
 } 
-
 
 ?>
 
 this includes another file.
+
+<p>The current year is  <?php   print_year(); ?></p>
+
+<?php
+include('footer.html');
+
+?>
