@@ -27,8 +27,8 @@ $multi = array('cars'=>array('Ford', 'Honda', 'Kia'),
 //    use with <pre> tags 
 
    $multi = array('cars'=>array('Ford', 'Honda', 'Kia'),
-                               'phones'=>array('iPhone', 'Samnsung', 'Mot'),
-                               'other'=>array('Cakes'=>array('custard creams', 'Digestives', 'Jafa cakes'))
+                 'phones'=>array('iPhone', 'Samnsung', 'Moto'),
+                  'other'=>array('Cakes'=>array('custard creams', 'Digestives', 'Jafa cakes'))
                                );
 echo '<pre>';
 
