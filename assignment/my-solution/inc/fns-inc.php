@@ -139,8 +139,7 @@ function getBand($salary){
 
         if ( $salary <=  $data["maxsalary"] ) {
     
-//            echo "Salary (&pound;".$salary.") is in band " . $count;
-            return $count; // band (1 - 4)
+            return $count; // band (1 - ?)
         }
     
     
