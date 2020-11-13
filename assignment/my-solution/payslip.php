@@ -1,7 +1,8 @@
 <?php 
 if (!isset($_GET["id"]) OR !is_numeric($_GET["id"]) ) {
-    echo "No, or invalid employee ID. Returning you to the list.";
-    header("Location: index.php");
+	echo "No, or invalid employee ID. Returning you to the list.";
+	sleep(2);
+    header("Location: index-rename.php");
 }
 
 else $emp_id = $_GET["id"];
@@ -11,8 +12,9 @@ else $emp_id = $_GET["id"];
 require('inc/fns-inc.php');
 require_once('inc/header-inc.php');
 
-$jsonfile = 'employees-final.json';
-$taxfile = '';
+$jsonfile = 'data/employees-final.json';
+$taxfile = 'data/tax-tables.json';
+
 try {
     
     // $json = @file_get_contents($jsonfile) or die("cannot open file - $jsonfile");
@@ -20,29 +22,40 @@ try {
 
 } catch (Exception $e) {
 
-   // echo 'Caught exception: ',  $e->getMessage(), "\n";
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
 
     include('inc/error-inc.php');
     include('inc/footer-inc.php');
     exit;
 }
 
+
+
 restore_error_handler();
 // https://www.php.net/manual/en/function.restore-error-handler.php
 
-
+// TODO test json for errors.
 $emp_json_data = json_decode($json);  // 2nd param true returns array, false returns .
 
 $header_array = array("id"=>"ID", "firstname"=>"First Name", "lastname"=>"Last Name", "jobtitle"=>"Position","salary"=>"Salary" );
 // var_dump( json_decode($json, false));
 
 
+$emp_found = FALSE; // flag to update when / if record is matched so we don't display errors or empty data.
+
 foreach($emp_json_data as $data){
     // var_dump( $data);
 
-    if ($data->id <> $emp_id) continue; // stop looping if it's not the employee we want
+    if ($data->id <> $emp_id) {
 
-   
+
+		
+		continue; // stop looping if it's not the employee we want
+
+	}
+
+	else $emp_found = TRUE;
+
         $id = $data->id;
         $firstname = $data->firstname;
         $lastname = $data->lastname;
@@ -52,8 +65,26 @@ foreach($emp_json_data as $data){
         $ni = $data->nationalinsurance;
         $employmentstart = $data->employmentstart;
         $homeaddress = $data->homeaddress;
+		
+		
+		if (!empty($data->department)) $department = $data->department;
+		else $department = 'Unspecified';
+		
+
 
 }  // end foreach
+
+// TODO = handle if the emp ID is not found.
+
+if(!$emp_found) {
+ 
+	$error = "Invalid ID. Cannot find employee";
+	
+	require('inc/error-inc.php');
+	require('inc/footer-inc.php');	
+	exit;
+}
+
 ?>
 <main class="container">
 	<div class="row">
@@ -72,8 +103,8 @@ foreach($emp_json_data as $data){
 								<td colspan="2"><?php echo $employmentstart;?></td>   											
                             </tr>
 							<tr>
-								<td colspan="2">Bank Name / Branch : </td>
-								<td colspan="3">Bank Name / Branch Name Here</td>
+								<td colspan="2">Department: </td>
+								<td colspan="3"><?php echo $department;?></td>
 							</tr>
 							<tr>
 								<td colspan="2">Tax Period</td>
@@ -153,13 +184,6 @@ echo "</pre>";
 ?>
 
 </main>
-
-
- 
-
-
-
-
 
 
 <?php require_once('inc/footer-inc.php');?>

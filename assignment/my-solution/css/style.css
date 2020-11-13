@@ -25,3 +25,15 @@ a {
 
 /* nav */
 .label,.glyphicon { margin-right:5px; }
+
+
+.error { 
+
+    height: 30px;
+    border: 1px dotted darkgray;
+    background-color: lightgray;
+    text-align: center;
+    padding: 8px;
+    color: red;
+   
+}
