@@ -38,7 +38,7 @@ $tax_rates_array = json_decode($taxjson,true);
 // exit;
 
 $num_tax_bands = count($tax_rates_array);
-echo "no of bands = " . $num_tax_bands;
+// echo "no of bands = " . $num_tax_bands;
 
 // show_array($tax_rates_array, TRUE);
 
@@ -75,7 +75,7 @@ $link ="payslip.php?id=";
 
 $band = getBand($data->salary); 
          
-echo $record_count . " ";
+// echo $record_count . " ";
 
         echo write_cell($data->id, "" , $link);
         echo write_cell($data->firstname);

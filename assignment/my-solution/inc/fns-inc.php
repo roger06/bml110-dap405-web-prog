@@ -131,7 +131,7 @@ function getBand($salary){
 
     if (!isset($salary)) return false;
     if (!is_numeric($salary)) return false;
-    echo "Salary =  " . $salary;
+ 
     global $tax_rates_array;
 
     $count = 1;

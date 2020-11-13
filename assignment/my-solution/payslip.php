@@ -30,12 +30,34 @@ try {
 }
 
 
+try {
+    
+    // $json = @file_get_contents($jsonfile) or die("cannot open file - $jsonfile");
+    $taxjson = @file_get_contents($taxfile);
+
+} catch (Exception $e) {
+
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+
+    include('inc/error-inc.php');
+    include('inc/footer-inc.php');
+    exit;
+}
+
+
+
+
+ 
 
 restore_error_handler();
 // https://www.php.net/manual/en/function.restore-error-handler.php
 
 // TODO test json for errors.
 $emp_json_data = json_decode($json);  // 2nd param true returns array, false returns .
+$tax_rates_array = json_decode($taxjson, TRUE);  // 2nd param true returns array, false returns .
+
+
+
 
 $header_array = array("id"=>"ID", "firstname"=>"First Name", "lastname"=>"Last Name", "jobtitle"=>"Position","salary"=>"Salary" );
 // var_dump( json_decode($json, false));
@@ -65,10 +87,27 @@ foreach($emp_json_data as $data){
         $ni = $data->nationalinsurance;
         $employmentstart = $data->employmentstart;
         $homeaddress = $data->homeaddress;
+		$salary = $data->salary;
+		$currency = $data->currency;
+
+		if ($data->companycar == 'y') $companycar = 'Yes';
+		else $companycar = 'No';	
 		
+		if ($data->pension == 'y') $pension = 'Yes';
+		else $pension = 'No';
 		
 		if (!empty($data->department)) $department = $data->department;
-		else $department = 'Unspecified';
+		else $department = 'Unspecified';	
+
+		if (!empty($data->linemanager)) $linemanager = $data->linemanager;
+		else $linemanager = 'Unspecified';
+		// echo "salary = " . $salary;
+		$tax_band = getBand($salary);
+
+		
+		// echo "band = " . $tax_band;
+		$net_salary = calcTax($salary, $tax_band);
+
 		
 
 
@@ -108,56 +147,63 @@ if(!$emp_found) {
 							</tr>
 							<tr>
 								<td colspan="2">Tax Period</td>
-								<td colspan="3">20_ _ to 20_ _</td>
+								<td colspan="3"><?php echo date('Y');?></td>
 							</tr>
                             <tr>
-                                <td>Building Owner Name</td>
-                                <td colspan="1">Ward, Block and Door #, Assessment #,UPI #</td>
-                                <td width="150">Tax Details</td>
-                                <td width="50">RS</td>
-								<td width="50">00</td>
+                                <td>Line manager</td>
+                                <td colspan="1"><?php echo  $linemanager;?></td>
+                                <td width="150">Tax Band</td>
+                                <td colspan="3"><?php echo $tax_band;?></td>
                             </tr>	
 							<tr>
-								<td rowspan="6"><?php echo $full_name;?></td>
-								<td rowspan="6" width="50%"><?php echo $homeaddress;?>	</td>
-								<td>Property Tax</td>
-								<td>500</td>	
-								<td>00</td>
+								<td rowspan="5"><?php echo $full_name;?></td>
+								<td rowspan="5" width="50%"><?php echo $homeaddress;?>	</td>
+								<td>Income Tax</td>
+								<td> </td>	
+								<td> </td>
 							</tr>
 							<tr>	
-								<td>CESS%</td>
-								<td>120</td>
-								<td>00</td>
+								<td>Pension</td>
+								 
+								<td colspan="2"><?php echo $pension;?></td>
+
+								
+							</tr>
+							 
+							<tr>
+								<td>Company car?</td>
+								<td colspan="2"><?php echo $companycar;?></td>
+							 
+							</tr>
+						 
+							<tr>
+
+								<td>Net pay</td>
+								<td colspan="2" class="salary"><?php 
+								if ($currency == 'GBP') echo "&pound;";
+								
+								echo number_format($net_salary,2);?></td>
+							
 							</tr>
 							<tr>
-								<td>SWM CESS</td>
-								<td>120</td>
-								<td>00</td>
+								<td colspan="5">Amount in words :</td>
+
+								<?php
+
+									// TODO - use the PHP number formatting class
+									// https://www.php.net/manual/en/class.numberformatter.php
+									// $f = new NumberFormatter("en", NumberFormatter::SPELLOUT);
+									// echo $f->format(123456);
+
+									/* looks like this needs either php.ini change and / or
+									other modules installed 
+									try it on a VM!
+									sudo apt-get install php7.0-intl
+									*/
+
+								?>
 							</tr>
-							<tr>
-								<td>Adjustment if any</td>
-								<td>120</td>
-								<td>00</td>
-							</tr>
-							<tr>
-								<td>Penalty </td>
-								<td>120</td>
-								<td>00</td>
-							</tr>
-							<tr>
-								<td>Total</td>
-								<td>580</td>
-								<td>00</td>
-							</tr>
-							<tr>
-								<td colspan="5">Amount in words :Five Thousand Eighty Rupees Only</td>
-							</tr>
-							<tr>
-								<td>Depositer Signature</td>
-								<td>Account #</td>
-								<td>Office Manager signature</td>
-								<td colspan="2">Cashier Signature <br><br></td>
-							</tr>
+							 
 						</tbody>
 					</table>
 				</div>
