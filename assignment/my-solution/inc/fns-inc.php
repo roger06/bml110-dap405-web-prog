@@ -131,7 +131,7 @@ function getBand($salary){
 
     if (!isset($salary)) return false;
     if (!is_numeric($salary)) return false;
- 
+    echo "Salary =  " . $salary;
     global $tax_rates_array;
 
     $count = 1;
@@ -141,11 +141,28 @@ function getBand($salary){
     
             return $count; // band (1 - ?)
         }
-    
-    
+        
+        // TODO - need to trap an error here.
+          
         $count++;
     }
+} // end getBand()
+
+
+
+// quick debug
+// terminates script if $terminate set true
+function show_array($data, $terminate=TRUE){
+
+    if (empty($data)) return false;
+
+    echo "<pre style='font-weight: bold; color: black; font-size:1em;'>"; 
+
+    print_r($data);
+    echo "</pre>";
+
+    if ($terminate) exit;
+ 
+
 }
-
-
 ?>
