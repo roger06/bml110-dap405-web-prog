@@ -33,4 +33,5 @@ $emp_json_data = json_decode($json);  // 2nd param true returns array, false ret
 $tax_rates_array = json_decode($taxjson,true); 
 
 
-show_array($emp_json_data, TRUE);
+// show_array($emp_json_data, TRUE);
+show_array($tax_rates_array, TRUE);
