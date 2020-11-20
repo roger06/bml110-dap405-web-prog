@@ -1,4 +1,6 @@
 <?php 
+// payslip page using grid and flex box instead of tables.
+
 
 if (!isset($_GET["id"]) OR !is_numeric($_GET["id"]) ) {
 	echo "No, or invalid employee ID. Returning you to the list.";
@@ -127,7 +129,8 @@ if(!$emp_found) {
 }
 
 ?>
-<main class="container">
+<main class="payslip">
+
 	<div class="row">
 		<h2>Payslip for <?php echo $full_name;?></h2>	
 			<div class="table-responsive">

@@ -1,3 +1,4 @@
+ 
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,10 +23,14 @@
     <title>
     <?php
 
+    if (isset($pagetitle )) echo $pagetitle;
+
+    else echo 'Payroll';
+      // if (  $_SERVER[]   )
 
     ?>
     
-    Payroll</title>
+    </title>
   </head>
   <body>
   <header>

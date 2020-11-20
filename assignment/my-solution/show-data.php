@@ -1,4 +1,9 @@
 <?php 
+$pagetitle = 'Show data';
+
+require('inc/fns-inc.php');
+require_once('inc/header-inc.php');
+
 /*
 
 show raw data in arrays - for debugging only,.
@@ -7,7 +12,7 @@ show raw data in arrays - for debugging only,.
   
 
  
-require('inc/fns-inc.php');
+ 
 
 $jsonfile = 'data/employees-final.json';
 $taxfile   = 'data/tax-tables.json';
@@ -31,7 +36,23 @@ restore_error_handler();
 
 $emp_json_data = json_decode($json);  // 2nd param true returns array, false returns object.
 $tax_rates_array = json_decode($taxjson,true); 
+?>
+
+<div class="showdata">
+
+
+
+<?php
+
 
 
 // show_array($emp_json_data, TRUE);
 show_array($tax_rates_array, TRUE);
+?>
+
+</div>
+<?php
+
+
+require_once('inc/footer-inc.php');?>
+
