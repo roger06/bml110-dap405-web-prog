@@ -6,7 +6,7 @@ body {
     /* display: none; */
 }
 
-main {
+main, .upper {
     margin-top: 20px;
     margin-left: 40px;
     width: 70%;
@@ -79,6 +79,7 @@ a {
 
     grid-template-rows: 50px 150px;
 
+    grid-template-areas: ;
 }
 
 .headerleft, .headerright {
@@ -93,6 +94,21 @@ a {
 
 }
 
+
+
+.upper {
+    margin-top: 2em;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+
+
+}
+
+.upper .headerright {
+    font-weight: normal;
+    font-size: 1em;
+}
 .cell{
 
     overflow: hidden;
