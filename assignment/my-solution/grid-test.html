@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Grid Test</title>
+    <style>
+        body {
+
+            width: 70%;
+            margin: 0 auto;
+            /* background-color: lightgray; */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 20% auto ;
+            grid-template-rows: 40px 100px 50px;
+
+        }
+        .header{
+            background-color: aqua;
+            grid-column: 1/4;
+        }
+
+        .left{
+            background-color: yellow;
+
+            grid-column: 1;
+        }
+        .main{
+            background-color: blue;
+            grid-column: 2/4;
+
+        }
+        .footer{
+            background-color: purple;
+            grid-column: 1/4;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>sdkfhj</h1>
+
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="left">left</div>
+        <div class="main">Main</div>
+        <div class="footer">footer</div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
