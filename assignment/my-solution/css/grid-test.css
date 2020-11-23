@@ -1,0 +1,82 @@
+body {
+
+    width: 80%;
+    margin: 0 auto;
+    /* background-color: lightgray; */
+    font-size: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% auto;
+    /* number of cols with width */
+    grid-template-rows: 70px auto 50px;
+    gap: 0.5em;
+
+}
+
+.header {
+    background-color: aqua;
+    grid-column: 1/4;
+}
+
+.left {
+    background-color: yellow;
+
+    grid-column: 1;
+}
+
+.main {
+    background-color: blue;
+    color: white;
+    grid-column: 2/4;
+    padding: 1em;
+    font-size: 0.8em;
+
+}
+
+.footer {
+    background-color: purple;
+    grid-column: 1/4;
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    /* want to stack at this width */
+
+    body {
+        /* display: none; */
+        background-color: khaki;
+        width: 95%;
+    }
+
+
+    .container {
+
+        grid-template-columns: auto auto;
+        /* number of cols with width */
+        grid-template-rows: 50px auto auto;
+        /* number of rows and their heights*/
+        gap: 0.5em;
+
+    }
+
+    .left {
+
+
+        grid-column: 1/4;
+        grid-row: auto;
+        /* display: none;   hides content and removes space */
+        /* visibility: hidden; hides content but keeps the space */
+
+    }
+
+    .main {
+        grid-column: 1/4;
+        grid-row: 3/4;
+
+    }
+}
+
+/* end max width 600 */
