@@ -8,10 +8,10 @@ body {
 
 .container {
     display: grid;
-    height: 100vh;
+    /* height: 100vh; */
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "hd hd hd" "left main main" "ftr ftr ftr";
+    grid-template-rows: auto auto 80px;
+    grid-template-areas: "hd hd hd""left main main""ftr ftr ftr";
 }
 
 header {
@@ -19,23 +19,138 @@ header {
     grid-area: hd;
 }
 
- .left{
-     background: yellow;
-     grid-area: left;
- }
+.left {
+    background: yellow;
+    grid-area: left;
+}
 
- main {
-     background-color: yellowgreen;
-     grid-area: main;
- }
+main {
+    background-color: yellowgreen;
+    grid-area: main;
+}
 
- footer{
-     background-color: aqua;
-     grid-area: ftr;
- }
+footer {
+    background-color: aqua;
+    grid-area: ftr;
+}
 
- @media only screen and (max-width: 1200px) {
-     body {
-         display: none;
-     }
- }
+
+
+/* break point */
+
+
+@media only screen and (max-width: 1200px) {
+    body {
+
+        width: 90%;
+
+    }
+
+    .container {
+        padding: 10px;
+        gap: 1em;
+        border-radius: 10px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 70px auto auto 70px;
+        grid-template-areas:
+            "hd hd hd"
+            "left left left"
+            "main main main"
+            "ftr ftr ftr";
+    }
+
+
+    header {
+        background-color: transparent;
+        border: 1px dashed black;
+        padding: 10px;
+        border-radius: 10px;
+
+
+    }
+
+
+    main {
+        background-color: transparent;
+        border: 1px dashed black;
+        padding: 10px;
+        border-radius: 10px;
+
+
+    }
+
+
+    .left {
+        background-color: transparent;
+        border: 1px dashed black;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+    h1 {
+        display: none;
+    }
+
+    header h1 {
+        display: inline;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 800;
+        font-stretch: extra-expanded;
+        font-variant: small-caps;
+    }
+
+    footer {
+        display: flex;
+        background-color: transparent;
+        border: 1px dashed black;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+
+
+    body {
+
+        width: 100%;
+        border-radius: 5px;
+
+    }
+
+
+    .container {
+        padding: 10px;
+        gap: 1em;
+        border-radius: 10px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 40px auto auto 70px;
+        grid-template-areas:
+            "hd hd hd"
+            "left left left"
+            "main main main"
+            "ftr ftr ftr";
+    }
+
+    header h1 {
+        font-size: 1em;
+    }
+
+    .left {
+
+        border-radius: 5px;
+
+    }
+
+    .left ul {
+
+        display: none;
+    }
+}
