@@ -25,6 +25,7 @@ try {
     exit;
 }
 
+
 restore_error_handler();
 // https://www.php.net/manual/en/function.restore-error-handler.php
 
@@ -42,6 +43,8 @@ $num_tax_bands = count($tax_rates_array);
 // echo "no of bands = " . $num_tax_bands;
 
 // show_array($tax_rates_array, TRUE);
+
+ 
 
 
 
