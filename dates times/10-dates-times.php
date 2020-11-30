@@ -38,6 +38,13 @@
 
     <main role="main" class="container">
 
+<?php
+
+        echo date('d-m-Y');
+exit;
+?>
+
+
         <div class="starter-template">
             <h1>Date and times</h1>
 
