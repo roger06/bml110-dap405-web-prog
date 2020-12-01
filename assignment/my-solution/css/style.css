@@ -25,3 +25,35 @@ a {
 
 /* nav */
 .label,.glyphicon { margin-right:5px; }
+
+
+.error { 
+
+    height: 30px;
+    border: 1px dotted darkgray;
+    background-color: lightgray;
+    text-align: center;
+    padding: 8px;
+    color: red;
+   
+}
+.row-striped:nth-of-type(odd){
+    background-color: #efefef;
+    border-left: 4px #000000 solid;
+  }
+  
+  .row-striped:nth-of-type(even){
+    background-color: #ffffff;
+    border-left: 4px #efefef solid;
+  }
+  
+  .row-striped {
+      padding: 15px 0;
+  }
+      
+
+  .salary {
+
+    font-weight: bold;
+    font-style: oblique;
+  }

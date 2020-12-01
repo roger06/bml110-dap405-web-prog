@@ -28,12 +28,20 @@ restore_error_handler();
 // https://www.php.net/manual/en/function.restore-error-handler.php
 
 
+// TODO - add error checking
 $emp_json_data = json_decode($json);  // 2nd param true returns array, false returns object.
+
 $tax_rates_array = json_decode($taxjson,true); 
 
 // if ($emp_json_data) echo 'json valid';
 // else echo 'invalid !!!';
 // exit;
+
+$num_tax_bands = count($tax_rates_array);
+// echo "no of bands = " . $num_tax_bands;
+
+// show_array($tax_rates_array, TRUE);
+
 
 
 
@@ -57,6 +65,8 @@ foreach ($header_array as $header){
 </tr>
 
 <?php
+
+$record_count = 0;
 foreach($emp_json_data as $data){
     // var_dump( $data);
 
@@ -65,6 +75,7 @@ $link ="payslip.php?id=";
 
 $band = getBand($data->salary); 
          
+// echo $record_count . " ";
 
         echo write_cell($data->id, "" , $link);
         echo write_cell($data->firstname);
@@ -75,19 +86,21 @@ $band = getBand($data->salary);
         echo write_cell($band);
         
         
-        echo write_cell( calcTax($data->salary, $band));
+        echo write_cell( calcTax($data->salary, $band), "GBP");
 
 
     
     echo "</tr>";
-
-}
+    $record_count++;
+} // end foreach
 ?>
         </table>
     </div>
 </div>
-
+<h2>Total: <?php echo $record_count;?></h2>
 <?php
+
+
 // exit;
 
 // if  ( is_object($emp_json_data)    ) echo 'json_data is object<br>';

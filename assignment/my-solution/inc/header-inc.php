@@ -16,23 +16,16 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style >
-        .row-striped:nth-of-type(odd){
-  background-color: #efefef;
-  border-left: 4px #000000 solid;
-}
-
-.row-striped:nth-of-type(even){
-  background-color: #ffffff;
-  border-left: 4px #efefef solid;
-}
-
-.row-striped {
-    padding: 15px 0;
-}
-    
+     
     </style>
     
-    <title>Payroll</title>
+    <title>
+    <?php
+
+
+    ?>
+    
+    Payroll</title>
   </head>
   <body>
   <header>
