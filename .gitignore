@@ -2,3 +2,4 @@
 *.png
 /student-sites/
 /file-uploads/uploads/*
+/assignment-submissions/*
