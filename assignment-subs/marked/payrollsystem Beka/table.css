@@ -1,0 +1,40 @@
+/*Style for Table*/
+table,
+th,
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px 15px;
+    font-family: arial;
+    text-align: center;
+}
+
+table [colspan="5"] {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: 500px;
+    display: block;
+}
+
+#norightborder {
+    border: 1px, 0px, 1px, 1px solid grey;
+}
+
+#noleftborder {
+    border: 1px, 1px, 1px, 0px solid grey;
+}
+
+/*Style for Table Header*/
+th {
+    background: darkblue;
+    color: white;
+}
+
+/*Style for Alternate Rows*/
+table tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+table tr:nth-child(even) {
+    background-color: #FFFFFF;
+}

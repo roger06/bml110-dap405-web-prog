@@ -1,0 +1,42 @@
+main{
+    align-self: center;
+    
+    display: grid;
+    grid-template-columns: 30rem, minmax(25rem 50rem);
+    grid-gap: 1rem;
+}
+h2, p{
+    margin-left: 2rem;
+}
+#adddiv, #deletediv{
+    margin-top: 2rem;
+
+    min-width: 30rem;
+
+    background-color: lightblue;
+    border-radius: .5rem .5rem .5rem .5rem;
+    box-shadow: .1rem .1rem .5rem #42445a;
+}
+#adddiv{
+    grid-column:1;
+}
+#deletediv{
+    grid-column: 3;
+}
+form{
+    margin-left: 2rem;
+    height: 38rem;
+    display: flex;
+    flex-flow: column wrap;
+}
+main input{
+    max-width: 15rem;
+}
+#submit{
+    margin-top: 2rem;
+
+    width: 10rem;
+    height: 2rem;
+
+    font-size: 1.5rem;
+}

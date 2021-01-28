@@ -1,0 +1,10 @@
+#footer {
+   display: block;
+   text-align: center;
+   font-size: 0.75em;
+   bottom: 0;
+   width: 90%;
+   height: 30px;
+   position: absolute;
+   margin: auto;
+}
