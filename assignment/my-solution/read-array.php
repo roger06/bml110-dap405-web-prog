@@ -5,18 +5,22 @@
 //step 1
 $jsonfile = 'data/employees-final.json';
  
+// print_r($jsonfile);
+
 
 //step 2 
-$json = @file_get_contents($jsonfile);
+$json = @file_get_contents('data/employees-final.json');
  
+// print_r($json);
  
 //step 3
-$emp_json_data = json_decode($json);  // 2nd param true returns array, false returns object.
+$emp_json_data = json_decode($json, true);  // 2nd param true returns array, false returns object.
   
 
-    
+    echo '<pre>';
 print_r($emp_json_data);
 
+echo '</pre>';
 ?>
 
  

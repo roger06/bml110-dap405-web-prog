@@ -1,0 +1,113 @@
+/*Style for Table*/
+table, th , td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 6px;
+    padding-left: 6px;
+    /*font-family: arial;*/
+    }
+    /*Style for Table Header*/
+    th {
+    background: rgb(88, 2, 2);
+    color: white;
+    text-align: left;
+    }
+    /*Style for Alternate Rows*/
+    table tr:nth-child(odd) {
+    background-color: #f8dddc;
+    }
+    table tr:nth-child(even) {
+    background-color: #FFFFFF;
+    }
+
+    img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    }
+
+    body {
+        padding-top: 16px;
+        font-family: 'Arial', Helvetica, sans-serif;
+        font-size: 18x;
+        padding-left: 5px;
+    }
+
+    .navbar {
+        background: rgba(165, 42, 42, 0.322);
+        /* rgba(247, 227, 227, 0.801 */
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        
+
+    }
+    
+    h1 {
+        color: rgb(165, 42, 42);
+        margin-top: 20px;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+
+    h4 {
+        color: rgb(165, 42, 42);
+        font-size: 15px;
+
+    }
+
+    h5 {
+        color: rgb(165, 42, 42);
+
+        text-decoration: underline;
+    }
+    h3 {
+        color:  rgb(0,0,0);
+        font-size: 16px;
+        text-align: center;
+        background-color: rgb(165, 42, 42, 0.322 ); 
+        /* 235, 188, 188 */
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-width: 3px;
+        border-color: rgb(0,0,0);
+ 
+    }
+
+    h6 {
+        color: rgb(165, 42, 42);
+        font-size: 16px;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .row {
+        
+        
+        background-color: rgb(253, 253, 253);
+    }
+        
+    #main {
+        position: relative;
+        width: 120%;
+        height: 100%;
+       
+        
+      }
+
+      footer {
+           
+        justify-content: center;
+        text-align: center;
+        bottom: 0;
+        padding-top: 15px;                    
+      }
+
+#testimage{
+    height: 300px;
+    width: auto;
+    margin-bottom: 20px;
+    margin-left: 0px;
+}
+

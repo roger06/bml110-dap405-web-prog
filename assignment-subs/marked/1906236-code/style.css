@@ -1,0 +1,34 @@
+body, .background {
+  background-color: #ebebeb;
+}
+
+.login-row {
+  margin-top: 100px;
+}
+
+.form-background {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(194, 193, 193);
+}
+
+.card-link {
+  color: inherit;
+}
+
+.top-bar {
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  height: 80vh !important;
+  overflow: auto !important;
+}
+
+.edit-column {
+  text-align: center;
+}
+
+.navigation {
+  display: inline-block;
+}

@@ -1,0 +1,218 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:whitesmoke;
+
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;    
+
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.header{
+    border-radius: .5rem 2.5rem 2.5rem .5rem;
+    background-color: #42445a;
+    height: 5rem;
+    display: inline-flex;
+    flex-flow: row;
+    text-shadow: black 2px 2px;
+    box-shadow: .1rem .1rem .5rem #42445a;
+    width: 100%;
+}
+#indexheader {
+    border-radius: 10px;
+    background-color: #42445a;
+    height: 10rem;
+    margin: 70px auto;
+    display: flex;
+    flex-flow: row;
+    align-content: center
+}
+
+#indexlogo{
+    padding-left: 20px;
+    margin-top: 25px;
+    flex: auto;
+    font-size: 5rem;  
+    font-family: 'Lobster';
+    text-shadow: 5px 5px black;
+    /*from: https://stackoverflow.com/questions/11839655/is-it-possible-to-adjust-a-fonts-vertical-scaling-using-css*/
+    transform: scale(1.25, 1);
+    -webkit-transform: scale(1.25, 1); /* Safari and Chrome */
+    -moz-transform: scale(1.25, 1); /* Firefox */
+    -ms-transform: scale(1.25, 1); /* IE 9+ */
+    -o-transform: scale(1.25, 1); /* Opera */
+    transform-origin: top left; 
+}
+#indexlogo a{
+    color: whitesmoke;   
+    text-decoration: none;
+}
+#login{
+    margin: 5rem auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    width: 30rem;
+}
+#username, #password, #loginbutt{
+    font-size: 1.5rem;
+    border: black solid 2px;
+    padding: .3rem;
+}
+#username{
+    border-radius: 10px 10px 0px 0px;
+}
+#password{
+    border-radius: 0px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+#loginbutt{  
+    border-radius: 0px 0px 10px 10px;
+}
+#logo a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+#loginbutt:hover{
+    color: whitesmoke;
+    background-color: #42445a;
+    text-shadow: black 2px 2px;
+}
+
+#logo{
+    text-shadow: 3px 3px black;
+    text-decoration: none;
+    flex: 0 1 1500px;
+    padding-left: 20px;
+    align-self: center;
+    font-family: 'Lobster';
+    font-weight: 500;
+    font-size: 40px;
+    /*from: https://stackoverflow.com/questions/11839655/is-it-possible-to-adjust-a-fonts-vertical-scaling-using-css*/
+    transform: scale(1.25, 1);
+    -webkit-transform: scale(1.25, 1); /* Safari and Chrome */
+    -moz-transform: scale(1.25, 1); /* Firefox */
+    -ms-transform: scale(1.25, 1); /* IE 9+ */
+    -o-transform: scale(1.25, 1); /* Opera */
+    transform-origin: top left; 
+}
+#simplediv{
+    display: flex;
+    width: 57rem;
+}
+
+.menu{
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    position: relative;
+    flex-flow: row nowrap;
+    justify-content: right;
+    align-items: center;
+}
+.menu a{
+    text-decoration: none;
+}
+.menu li{
+    padding: 10px;
+    color: whitesmoke;
+    height: 20px;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+
+.menu > li > a{
+    padding: 10px 10px;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+.menu a:hover{
+    opacity: 60%;
+}
+
+
+.flextainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: none;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+#navbarphoto{
+    border-radius: 2rem;
+    width: 4rem;
+    height: 4rem;
+    /* margin-top: -.6rem; */
+    margin-bottom: -.2rem;
+    /* margin-left: -.65rem;  */
+    margin-right:-.65rem;
+}
+.fas{
+    padding: 0.4rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: .5rem;
+    font-size:1.3rem;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 95%;
+}
+.roleicon{
+    font-size:1.8rem;
+    text-align: center;
+}
+.numeric{
+    font-family: "consolas";
+    text-align: right;
+}
+/*Font-awesome role icons*/
+.fa-medkit{
+    color:green;
+    background-color: white;
+    border: solid green .2rem;
+}
+.fa-running{
+    color:white;
+    background-color: green;
+    border: solid green .2rem;
+}
+.fa-heartbeat{
+    color:red;
+    background-color: white;
+    border: solid red .2rem;
+}
+.fa-fire{
+    color: red;
+    background-color:orange;
+    border: solid orange .2rem;
+}
+
+.fa-chess-queen{
+    color:black;
+    background-color: white;
+    border: solid black .2rem;
+}
+
+.fa-file-signature{
+    color: #ADA92D;
+    background: #FFFA5C;
+    border: solid #ADA92D .2rem;
+}
+
+.fa-hands-helping{
+    color:#495057;
+    background:#e9ecef;
+    border: solid #495057 .2rem;
+}

@@ -1,0 +1,138 @@
+body {
+    margin: 15px;
+}
+#logo {
+    float: left;
+    position: static;
+    margin: 10px;
+}
+
+.nav-bar {
+    border-bottom: 3px solid black;
+    text-align: right;
+    line-height: 70px;
+    margin: 20px auto;
+    min-height: 85px;
+    width: 95%;
+}
+.menu-nav {
+    margin: 0 30px 0 0;
+}
+.menu-nav a {
+    float: right;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+  
+.menu-nav a:hover {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+table{
+    border-collapse: collapse;
+    color: #FF0059;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+}
+
+th {
+    background-color: #FF0059;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 1px; 
+    padding: 1px;
+    font-size: 18px; 
+}
+
+td {
+    color: Black;
+    font-size: 18px;
+    padding: 6px;
+    border: 1px solid;
+} 
+
+h1 {
+    text-align: center;
+}
+
+.error  {
+    background-color: #FF0059;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+/*update php */
+
+.login-label{
+    margin-left: 150px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 10px 100px 20px 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+/* Set a style for all buttons */
+.login-button {
+    background-color: #FF0059;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 130px 20px 130px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 12px;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+.cont {
+    max-width: 700px;
+    overflow: hidden;
+    margin: 10% auto;
+    background-color:white;
+}
+
+.left-column {
+    float: left;
+    width: 55%;
+    margin-right: 5%;
+    height: 300px;
+    padding-top: 3em;
+    background-color: #28cccc;
+}
+
+.right-column {
+    float: right;
+    width: 40%;
+    height: 300px;
+    padding-top: 3em;
+    background-color: #73d8fa;
+}
+
+
+
+
+
+
+

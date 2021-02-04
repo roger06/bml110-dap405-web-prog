@@ -1,0 +1,136 @@
+main{
+    align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: grid;
+    grid-template-columns: 20rem 2rem minmax(35rem, 60rem);
+    grid-template-rows: 2rem 2rem 8rem 8rem;
+}
+aside{
+    background-color: #ddd;
+    color:black;
+
+    border-radius: .5rem;
+
+    grid-column: 1/2;
+    grid-row: 2/5;
+}
+#lowclearance{
+    grid-row:2/4;
+}
+aside label, aside div{
+    margin-top: .5rem;
+} 
+aside div{
+    flex-flow: row nowrap;
+}
+.slider{
+    width:12rem;
+}
+aside select{
+    font-size: 1em;
+}
+#formbutts{
+    padding: 1rem;
+    margin: auto;
+}
+#formbutts input, #formbutts button{
+    font-size: 1.3em;
+    margin: 0 .5rem 0 .5    rem;
+    width: 6rem;
+    height: 2rem;
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+    background-color: white;
+
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+table img{
+    height: 3rem;
+    width: 3rem;
+    padding-top: .2rem;
+    padding-left: .2rem;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: .5rem;
+    -moz-border-radius-bottomleft: .5rem;
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius: .5rem;
+    -moz-border-radius-bottomright: .5rem;
+
+}
+table tr:first-child th:first-child {
+    border-top-left-radius: .5rem;
+    -moz-border-radius-topleft: .5rem;
+}
+table tr:first-child th:last-child {
+    border-top-right-radius: .5rem;
+    -moz-border-radius-topright: .5rem;
+}
+th, td{
+    padding: .2rem;
+    min-width: 2em;
+}
+tr:hover{
+    background-color: lightslategrey;
+}
+th{
+    text-align: center;
+}
+.tablephoto{
+max-width:60px;
+width: 60px;
+margin-right:-20px;
+}
+.alternate{
+    background-color: lightblue;
+}
+.tablehead{
+    background-color: skyblue;
+    color: white;
+}
+.roleicon{
+    width: 9rem;
+    text-align: right;
+}
+button{
+    background-color: none;
+    border: none;
+    padding: 0px;
+    margin: 0px 0px -15px 0px;
+    width: 8em;
+    height: 8em;
+}
+tr:hover button{
+    opacity: 70%;
+}
+.seymorebutt{
+    text-align: center;
+    width: 4em;
+}
+.seymorebutt:hover{
+    background-color: #42445a;
+}
+.seymorebutt a{
+    display: inline-block;
+    padding: 22px 6px;
+    margin: -22px -6px;
+    width: 4em;
+    color:black;
+}
+.seymorebutt a:hover{
+    color:whitesmoke;
+}
+.id{
+    text-align:center;
+}
+#filterform{
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+}

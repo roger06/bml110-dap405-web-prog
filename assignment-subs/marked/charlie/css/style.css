@@ -1,0 +1,43 @@
+body{
+    display: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+table {
+    border-collapse: collapse;
+    font-family: arial;
+    background-color: black;
+    width: 100%;
+  }
+  th, td{
+      padding: 5px;
+  }
+   tr:hover{
+      background-color: lightslategrey;
+  }
+  th{
+      text-align: center;
+  }
+  .numeric{
+      font-family: "consolas";
+      text-align: right;
+  }
+  .alternate{
+      background-color: lightblue;
+  }
+  .tablehead{
+      background-color: skyblue;
+      color: white;
+  }
+  button{
+      background-color: none;
+      border: none;
+      padding: 0px;
+      margin: 0px 0px -15px 0px;
+      width: 50px;
+      height: 50px;
+  }
+  tr:hover button{
+      opacity: 70%;
+  }
