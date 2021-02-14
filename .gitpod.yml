@@ -1,0 +1,5 @@
+image: php
+
+tasks:
+  - init: php
+    command: php
