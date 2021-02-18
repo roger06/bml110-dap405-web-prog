@@ -1,3 +1,5 @@
+<?php include('../inc/basicstyle.html'); // just to make content easier to read.?>
+
 <h1>foreach loop</h1>
 <p>Arrays are easily iterated through with this 'control statement'</p>
 

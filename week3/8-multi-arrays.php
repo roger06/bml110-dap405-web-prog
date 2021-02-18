@@ -1,3 +1,4 @@
+<?php include('../inc/basicstyle.html'); // just to make content easier to read.?>
  
 <h1>PHP Multi-dimensional arrays</h1>
 <p>Multi-dimensional arrays are extremely powerful, but can be difficult.</p>
