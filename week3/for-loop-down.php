@@ -4,12 +4,24 @@
 
 <?php
 
-for ($x = 0; $x <= 10; $x--) {
+// exit;
+
+
+
+for ($x = 100; $x >= 0; $x--) {
 
   echo 'The number is '. $x;
   echo '<br>';
-  echo 'The number is '. $x * 100 ;
-  echo '<br>';
+
+    if ($x == 80 ) {
+
+        echo 'found it!';
+        exit;
+
+    }
+ 
+
+ 
   
 }
 

@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" href="ticketsystem.css">
+		<script>
+			function Go(){
+
+				const ticketLimit = 5;
+
+				var inputNumber = document.getElementById("number-input");
+				var nameInputList = document.getElementById("input-list");
+				var errorMessage = document.getElementById("error-message");
+
+				nameInputList.innerHTML = "";
+
+				if(inputNumber.value > ticketLimit){
+					errorMessage.style.display = "block";
+					return;
+				}
+
+				else{
+					errorMessage.style.display = "none";
+				}
+
+				for (let i = 0; i < inputNumber.value; i++){
+
+					var ticketInput = document.createElement("li");
+					
+					var inputField = document.createElement("input");
+				
+					inputField.classList.add("ticket-name");
+
+					ticketInput.appendChild(inputField);
+					nameInputList.appendChild(ticketInput);}
+
+				if (inputNumber.value > 0 && inputNumber.value !== null){
+					var listTitle = document.getElementById("input-list-title");
+					listTitle.style.display = "block";
+
+					var purchaseButton = document.getElementById("purchase-button");
+					purchaseButton.style.display = "block";
+				}
+
+				if(inputNumber.value <= 0 || inputNumber.value === null){
+					alert("Woops! You haven't entered a valid amount.")
+				}
+			}
+
+
+
+
+
+
+			function purchase(){
+				var names = document.getElementsByClassName("ticket-name");
+				var nameOutputList = document.getElementById("output-list");
+				var orderProcessed = document.getElementById("purchase-button");
+
+				orderProcessed.innerHTML = Date();
+				nameOutputList.innerHTML = "";
+
+				for (var i = 0; i < names.length; i++){
+					var nameOutput = document.createElement("li");
+					var nameOutputText = document.createTextNode(names[i].value);
+
+					nameOutput.appendChild(nameOutputText);
+					nameOutputList.appendChild(nameOutput);
+				}
+
+				var ticketHolder = document.getElementById("ticket-holder");
+				ticketHolder.style.display = "block";
+
+				var totalPrice = document.getElementById("total-price");
+				totalPrice.style.display = "block";
+
+				var processedButton = document.getElementById("processed-button");
+				processedButton.style.display = "block";
+
+				var price = 15 * names.length;
+				var totalPriceOutput = document.createTextNode(price);
+
+				totalPrice.appendChild(totalPriceOutput);
+
+				document.getElementById("purchase-button").disabled=true;
+
+				document.getElementById("input-list-title").style.display = "none";
+				document.getElementById("input-list").style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Ticket Bookings </h1>
+		<h4 id="error-message" style="display:none">You have exceeded the ticket amount allowance.</h4>
+		<table>
+			<tr>
+				<td class="title">Ticket Selected</td>
+				<td class="title">Price Per Ticket</td>
+				<td class="title">Quantity</td>
+			</tr>
+
+			<tr>
+				<td class="artist">Portsmouth Harbour</td>
+				<td class="cost">£15</td>
+				<td><input id="number-input" type="number">
+					<button onClick="Go()">Go</button></td>
+			</tr>
+		</table>
+
+		<h4 id="input-list-title" style="display:none">Full Name:</h4>
+		<ol id="input-list"></ol>
+
+		<h4 id="processed-button" style="display:none">Order Processed:</h4>
+		<button id="purchase-button" style="display:none" onClick="purchase()">Purchase</button>
+
+		<div id="name-output"> 
+			<h4 id="ticket-holder" style="display:none">Ticket holders:</h4>
+			<ol id="output-list">
+			</ol>
+
+			<h4 id="total-price" style="display:none">Total Price: £</h4>
+		</div>
+	</body>
+</html>
+
