@@ -38,9 +38,21 @@
 
     <main role="main" class="container">
 
+    <script>
+       console.log(Date());
+
+    </script>
+
 <?php
 
-        echo date('d-m-Y');
+        echo date('d m y ');
+
+ 
+
+
+
+
+
 exit;
 ?>
 

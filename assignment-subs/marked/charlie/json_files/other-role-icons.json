@@ -1,9 +1,0 @@
-{
-    "First Aider":"<span title='First Aider'><i class='fas fa-medkit'></i></span>",
-    "AED Trained":"<span title='AED Trained'><i class='fas fa-heartbeat'></i></span>",
-    "Fire Marshall":"<span title='Fire Marshall'><i class='fas fa-fire'></i></span>",
-    "Staff Club Manager":"<span title='Staff Club Manager'><i class='fas fa-chess-queen'></i></span>",
-    "Data Protection Office":"<span title='Data Protection Officer'><i class='fas fa-file-signature'></i></span>",
-    "Community Liason":"<span title='Community Liason'><i class='fas fa-hands-helping'></i></span>",
-    "Fire Evacuation":"<span title='Fire Evacuation'><i class='icon fas fa-running'></i></span>"
-}

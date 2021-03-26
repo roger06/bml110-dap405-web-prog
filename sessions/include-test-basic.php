@@ -1,8 +1,9 @@
 <?php
  
-require('incsfile-inc.php');
+require('incfile-inc.php');
 
+myfun();
 
 ?>
 
-this includes another file.
+<p>this includes another file.</p>

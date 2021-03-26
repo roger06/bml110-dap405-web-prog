@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Form values to a loop in JS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        body {
+            padding-top: 1rem;
+        }
+
+        .starter-template {
+            padding: 3rem 1.5rem;
+
+        }
+
+        .selectnumber {
+            width: 40px;
+        }
+    </style>
+
+    <script>
+
+      function showvalue() {
+
+         var newValue = myForm.thenumber.value;
+
+        console.log('form value is  ' + newValue);
+
+
+        namediv.innerHTML = '<span style="background: blue; color: white; padding: 5px; margin-bottom: 5px;">' + newValue +  '</span>';
+
+        }
+
+
+
+        function loop () {
+
+            var number = myForm.thenumber.value;
+
+            // var othernum =  document.getElementById('selectnumber').value;
+
+            // console.log("other = " + othernum);
+          
+           
+
+            var outputList = document.getElementById("loopoutput");
+
+            console.log(outputList);
+
+
+           
+            for (var i = 1; i <= number; i++){
+
+                console.log(i);
+
+                var nameOutput = document.createElement("li");
+                nameOutput.innerHTML = "This is number " + i;
+                outputList.appendChild(nameOutput);
+					 
+			} // end for
+
+        } // end loop()
+
+ 
+
+    </script>
+
+
+
+</head>
+
+
+<body>
+
+
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <h1>Form values to drive a JS loop</h1>
+
+            <p>Here we'll... </p>
+
+            <ol>
+            <li>Get a number from the user</li>
+            <li>Write a function to execute a loop the number of times chosen.</li>
+        
+
+            </ol>
+
+
+
+
+            <div id="mydiv">Please enter a number...</div>
+
+<form name="myForm">
+
+    <label for="name">Name </label>
+
+    <input type="number" name="thenumber" value="" id="selectnumber">  
+
+    <a class="btn btn-primary" href="#" role="button" onClick="showvalue()">See value</a>
+
+    <a class="btn btn-primary" href="#" role="button" onClick="loop()">Loop values.</a>
+
+
+
+    
+    <br>
+    <div id="namediv"></div>
+
+    <ul id="loopoutput">
+
+
+    </ul>
+</form>
+
+
+<pre>
+
+ Use  document.getElementById() and document.createElement() and .appendChild()
+</pre>
+
+        </div>
+
+    </main>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

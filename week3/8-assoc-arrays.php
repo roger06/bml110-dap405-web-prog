@@ -1,4 +1,5 @@
- 
+<?php include('../inc/basicstyle.html'); // just to make content easier to read.?>
+
 <h1>PHP 'Associative' arrays</h1>
 <p>Associative arrays are indexed by a string, rather than a number</p>
 
@@ -38,10 +39,27 @@ $user_details_assoc = array('firstname'=>'Roger',
 //use print_r instead (print readable)
 //    use with <pre> tags 
 
-   $user_details_assoc = array('firstname'=>'Roger',
+   $user_details_assoc = array('firstname'=>'Bob',
+                                
+
                                 'lastname'=>'Holden',
+
                                 'age'=>21,
-                                'member'=>TRUE);
+                                'email'=> 'r.holden@chi.ac.uk',
+
+                                'member'=>TRUE,
+                                'phones'=>array('iphone', 'samsung', 'moto', 'colours'=>array('red','white','blue'))
+ 
+                            
+                            );
+
+// echo $user_details_assoc['firstname'];
+// echo '<br>';
+// echo $user_details_assoc['phones'];
+
+print_r($user_details_assoc);
+
+exit;
 
 
  foreach ($user_details_assoc as $key => $value) {
