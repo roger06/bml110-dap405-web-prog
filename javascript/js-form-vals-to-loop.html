@@ -33,7 +33,9 @@
 
          var newValue = myForm.thenumber.value;
 
-        console.log('form value = ' + newValue);
+        console.log('form value is  ' + newValue);
+
+
         namediv.innerHTML = '<span style="background: blue; color: white; padding: 5px; margin-bottom: 5px;">' + newValue +  '</span>';
 
         }
@@ -44,9 +46,9 @@
 
             var number = myForm.thenumber.value;
 
-            var othernum =  document.getElementById('selectnumber').value;
+            // var othernum =  document.getElementById('selectnumber').value;
 
-            console.log("other = " + othernum);
+            // console.log("other = " + othernum);
           
            
 
@@ -103,12 +105,11 @@
 
     <label for="name">Name </label>
 
-    <input type="number" name="thenumber" value="" class="selectnumber" id="selectnumber">  
+    <input type="number" name="thenumber" value="" id="selectnumber">  
 
-    <a class="btn btn-primary" href="#" role="button" OnClick="showvalue
-    ()">See value</a>
+    <a class="btn btn-primary" href="#" role="button" onClick="showvalue()">See value</a>
 
-    <a class="btn btn-primary" href="#" role="button" onclick="loop()">Loop values.</a>
+    <a class="btn btn-primary" href="#" role="button" onClick="loop()">Loop values.</a>
 
 
 
