@@ -68,7 +68,7 @@ function calcTax($salary, $band){
             break;
         case 3:   // 40001 - 150000
         //echo 'band 3';
-            // more comlex, but we know if we're in this band we have
+            // more complex, but we know if we're in this band we have
             // £10000 tax free - we don't need to substract this - we can just work
             // backwards to work out the tax on band 2 and 3 
             //and £30000 at 20%

@@ -8,12 +8,13 @@ require('inc/fns-inc.php');
 require_once('inc/header-inc.php');
 
 $jsonfile = 'data/employees-final.json';
+
 $taxfile   = 'data/tax-tables.json';
 
 try {
     
     // $json = @file_get_contents($jsonfile) or die("cannot open file - $jsonfile");
-    $json = @file_get_contents($jsonfile);
+    $json = file_get_contents($jsonfile);
     $taxjson = @file_get_contents($taxfile); 
 } catch (Exception $e) {
 
