@@ -1,0 +1,27 @@
+body{
+	background-color: #cce6ff;
+	width: 700px;
+	font-family: "arial";
+}
+
+.title{
+	text-decoration: underline;
+	font-size: 1.5em;
+	width: 250px;
+}
+
+.artist{
+	font-size: 1.2em;
+}
+
+.cost{
+	font-size: 1.2em;
+}
+
+#error-message{
+	text-align: center;
+	width:500px;
+	height:20px;
+	color: #F4F4F4;
+	background-color: #F74747;
+}
