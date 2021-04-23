@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket booking</title>
 
+    <style>
+        #buy, #total{
+
+            display: none;
+        }
+    </style>
+
     <script>
 
             function clickme(){
@@ -34,7 +41,52 @@
 
                 } // end for loop
 
-            }
+                // set the buy button visible.
+                document.getElementById("buy").style.display = "block";
+
+            }  // end clickme()
+
+
+
+
+
+            function buy(){
+
+                // alert("buy fn");
+
+                var names = document.getElementsByClassName("customername");  // names in an array (collection) of all the input boxes for names
+                var price = 15;
+                var  total = 0;
+
+                var confirmList = document.getElementById("confirm");
+                // names.forEach(element => {
+                //     console.log(element);
+                // });
+                
+                for ( index = 0; index < names.length; index++) {
+                     console.log(names[index].value);
+
+                     var node = document.createElement("li");  
+                     var nameConfirm = document.createTextNode(names[index].value);
+
+                     node.appendChild(nameConfirm);
+                     confirmList.appendChild(node);
+
+
+                     total += price;
+                    //  console.log(" price " + price + "total " + total);
+                    
+                }
+              
+
+              console.log("total price " + total );
+
+                document.getElementById("total").innerHTML = "Total = " + total;
+                
+                 // set the total field visible.
+                 document.getElementById("total").style.display = "block";
+
+            }  // end buy()
 
     </script>
 
@@ -45,23 +97,30 @@
 
     <p>£15 per ticket - the page will not reload.</p>
 
-    <form>
-
-            <P>ENTER a number</P>
-
+    
+<P>ENTER a number</P>
             <input type="number" name="num-tickets" id="num-tickets" value="2">
 
-            <input type="submit" value="next..." onclick="clickme();">
+    <button onclick="clickme();" >next</button>
 
 
-           
 
-    </form>
+
     <!-- // to display input boxes once number selected  -->
-           <ul id="inputs">
+           <ol id="inputs">
 
 
-           </ul>
+           </ol>
 
+           <button id="buy" onclick="buy();">Buy!</button>
+
+          <!-- list to confirm names -->
+           <ol id="confirm">
+
+
+             </ol>
+             <!-- confirmation of total price (hidden to start with ) -->
+
+             <h2 id="total"></h2>
 </body>
 </html>
