@@ -1,8 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link rel="stylesheet" href="ticketsystem.css">
+		<link rel="stylesheet" href="style.css">
 		<script>
+
+
+
 			function Go(){
 
 				const ticketLimit = 5;
@@ -31,7 +34,9 @@
 					inputField.classList.add("ticket-name");
 
 					ticketInput.appendChild(inputField);
-					nameInputList.appendChild(ticketInput);}
+					nameInputList.appendChild(ticketInput);
+					
+				}
 
 				if (inputNumber.value > 0 && inputNumber.value !== null){
 					var listTitle = document.getElementById("input-list-title");
@@ -42,12 +47,9 @@
 				}
 
 				if(inputNumber.value <= 0 || inputNumber.value === null){
-					alert("Woops! You haven't entered a valid amount.")
+					alert("Please enter a number.")
 				}
 			}
-
-
-
 
 
 
@@ -89,21 +91,35 @@
 		</script>
 	</head>
 	<body>
-		<h1>Ticket Bookings </h1>
+		<h1>
+			JavaScript Ticket Bookings </h1>
+			<p>The page should not reload to display data.</p>
 		<h4 id="error-message" style="display:none">You have exceeded the ticket amount allowance.</h4>
 		<table>
 			<tr>
-				<td class="title">Ticket Selected</td>
-				<td class="title">Price Per Ticket</td>
+		
 				<td class="title">Quantity</td>
 			</tr>
 
 			<tr>
-				<td class="artist">Portsmouth Harbour</td>
-				<td class="cost">£15</td>
+		 
+			
 				<td><input id="number-input" type="number">
-					<button onClick="Go()">Go</button></td>
+					<button onClick="Go()">Next...</button></td>
 			</tr>
+			<!-- <tr>
+		 
+			
+				<td>
+					<p id="demo">Click me.</p>
+					<input type="text" >
+					<button id="listening">Test me...</button></td>
+
+				 
+			</tr>
+
+             <div id="label"></div> -->
+
 		</table>
 
 		<h4 id="input-list-title" style="display:none">Full Name:</h4>
@@ -119,6 +135,18 @@
 
 			<h4 id="total-price" style="display:none">Total Price: £</h4>
 		</div>
+
+		<script>
+// annonymous function.
+// document.getElementById("listening").addEventListener("click", function() { 
+// 	document.getElementById("label").innerHTML = "button clicked" ; 
+// 	} );
+
+ 
+
+
+
+		</script>
 	</body>
 </html>
 

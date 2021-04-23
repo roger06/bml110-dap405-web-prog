@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket booking</title>
+
+    <script>
+
+            function clickme(){
+                
+                // get the number
+
+
+                var num = document.getElementById("num-tickets").value;
+                
+                var namesForm = document.getElementById("inputs");
+                namesForm.innerHTML = "";
+ 
+                // loop and create x number of text input boxes.
+
+                for (let index = 1; index <= num; index++) {
+               
+                    var node = document.createElement("li");   // create list item
+ 
+                    var textInput = document.createElement("input");  // create text box
+                    textInput.setAttribute("type", "text");      // specify it as a text input
+                    textInput.classList.add("customername");  // add class to text box
+ 		 
+				    node.appendChild(textInput);
+                    namesForm.appendChild(node);
+
+
+                } // end for loop
+
+            }
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Ticket booking system</h1>
+
+    <p>£15 per ticket - the page will not reload.</p>
+
+    <form>
+
+            <P>ENTER a number</P>
+
+            <input type="number" name="num-tickets" id="num-tickets" value="2">
+
+            <input type="submit" value="next..." onclick="clickme();">
+
+
+           
+
+    </form>
+    <!-- // to display input boxes once number selected  -->
+           <ul id="inputs">
+
+
+           </ul>
+
+</body>
+</html>
