@@ -15,7 +15,7 @@
     "description":"£10,000 to £40,000 is taxed at 20%",
     "minsalary":10001,
     "maxsalary":40000,
-    "rate":2,
+    "rate":20,
     "exceptions":[ {"Company car": 100}, {"Super tax":50}]
   },
 
