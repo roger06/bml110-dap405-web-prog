@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket booking</title>
+
+    <style>
+
+        #buy {
+
+            display: none;
+        }
+
+    </style>
+
+    <script>
+
+        function clickme(){
+
+            //alert('click!!! - in the fn');#
+            var num = document.getElementById("num-tickets").value;
+
+            var namesForm = document.getElementById("inputs");
+
+            // console.log(num);
+
+            for ( index = 1; index <= num; index++) {
+
+                // console.log(index);
+
+                var node = document.createElement("li");
+
+                var textInput = document.createElement("input");
+
+                textInput.setAttribute("type", "text");
+                textInput.classList.add("customername");
+
+                node.appendChild(textInput);
+
+                namesForm.appendChild(node);
+
+                // set the buy button visible
+                document.getElementById("buy").style.display = "block";
+
+
+               
+            } // foreach
+
+
+        } // end clickme()
+
+        function buy(){
+
+            // create a list of names entered in the text boxes.
+            // add up total ticket price.
+
+            var price = 15;
+            var total = 0;
+
+            var names = document.getElementsByClassName("customername"); // create an array
+
+            var confirmList = document.getElementById("confirm");
+
+           
+
+            for ( index = 0; index < names.length; index++) {
+                 console.log(names[index].value);
+
+                 var node = document.createElement("li");
+
+                 var nameConfirm = document.createTextNode(names[index].value);
+
+                 node.appendChild(nameConfirm);
+
+                confirmList.appendChild(node);
+
+                total += price;
+            } // end for
+
+            document.getElementById("total").innerHTML= "Total = " + total;
+
+
+
+        } // end buy()
+
+    </script>
+</head>
+<body>
+
+    <h1>Ticket booking system</h1>
+
+    <p>£15 per ticket - this page will not refresh!</p>
+
+    <input type="number" id="num-tickets">
+
+    <button onclick="clickme()">Next...</button>
+
+
+    <!-- to display the input boxes -->
+    <ol id="inputs">
+
+
+    </ol>
+ 
+    <button id="buy" onclick="buy()">Buy</button>
+
+    <ol id="confirm">
+
+
+    </ol>
+
+    <h2 id="total"></h2>
+
+
+</body>
+</html>

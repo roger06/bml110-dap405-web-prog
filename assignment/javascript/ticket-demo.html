@@ -7,6 +7,12 @@
     <title>Ticket booking</title>
 
     <style>
+
+        body{
+
+            width: 70%;
+            margin: 0 auto;
+        }
         #buy, #total{
 
             display: none;
@@ -67,6 +73,8 @@
                      console.log(names[index].value);
 
                      var node = document.createElement("li");  
+
+                     
                      var nameConfirm = document.createTextNode(names[index].value);
 
                      node.appendChild(nameConfirm);
